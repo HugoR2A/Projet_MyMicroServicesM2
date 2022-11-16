@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import static com.example.demo.model.Actor.filmography;
+import static com.example.demo.model.Movie.mainActor;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,7 +22,7 @@ public class MovieController {
     static {
 
         List<Movie> movies = new ArrayList<Movie>();
-        Movie movie = new Movie("Bullet Train", "David Leitch", ActorController.getActorByName("Brad Pitt"),
+        Movie movie = new Movie("Bullet Train", "David Leitch", mainActor,
                 "3 Aout 2022");
         movies.add(movie);
 

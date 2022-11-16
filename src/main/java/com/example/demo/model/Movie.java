@@ -6,12 +6,12 @@ public class Movie {
     private String title;
     private String directorName;
     private String releaseDate;
-    private Actor mainActor;
+    public static Actor mainActor;
 
     public Movie(String title, String directorName, Actor mainActor, String releaseDate) {
         this.title = title;
         this.directorName = directorName;
-        this.mainActor = mainActor;
+        Movie.mainActor = mainActor;
         this.releaseDate = releaseDate;
     }
 
