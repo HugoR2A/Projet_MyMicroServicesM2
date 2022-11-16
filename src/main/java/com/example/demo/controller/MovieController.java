@@ -41,7 +41,7 @@ public class MovieController {
         List<Movie> movieList = movieDB.get(title);
         if(movieList == null) {
             movieList = new ArrayList<Movie>();
-            Movie movie = new Movie("Not found", "N/A", getActorByName(""),
+            Movie movie = new Movie("Not found", "N/A", mainActor,
                     "N/A");
             movieList.add(movie);
         }
@@ -55,8 +55,7 @@ public class MovieController {
         List<Movie> movieList = movieDB.get(date);
         if(movieList == null) {
             movieList = new ArrayList<Movie>();
-            Movie movie = new Movie("Not found", "N/A", getActorByName(""),
-                    "N/A");
+            Movie movie = new Movie("Not found", "N/A", mainActor, "N/A");
             movieList.add(movie);
         }
         return movieList;
