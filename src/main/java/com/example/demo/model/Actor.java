@@ -1,5 +1,4 @@
 package com.example.demo.model;
-import com.example.demo.model.Film;
 
 import java.util.List;
 
@@ -9,8 +8,10 @@ public class Actor {
     private String lastName;
     private String dateOfBirth;
 
+    public static List<String> filmography;
 
-    public Actor(String name, String lastName, String dateOfBirth) {
+
+    public Actor(String name, String lastName, String dateOfBirth, List<String> filmography) {
         this.name = name;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
