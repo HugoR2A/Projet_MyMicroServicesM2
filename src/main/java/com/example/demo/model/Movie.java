@@ -1,12 +1,15 @@
 package com.example.demo.model;
 
 
+import java.util.List;
+
 public class Movie {
 
     private String title;
     private String directorName;
     private String releaseDate;
     public static Actor mainActor;
+    public static List<String> filmography;
 
     public Movie(String title, String directorName, Actor mainActor, String releaseDate) {
         this.title = title;

@@ -8,14 +8,24 @@ public class Actor {
     private String lastName;
     private String dateOfBirth;
 
-    public static List<String> filmography;
+    private Movie movie;
 
 
-    public Actor(String name, String lastName, String dateOfBirth, List<String> filmography) {
+
+    public Actor(String name, String lastName, String dateOfBirth, Movie movie) {
         this.name = name;
         this.lastName = lastName;
         this.dateOfBirth = dateOfBirth;
+        this.movie = movie;
     }
+
+    public Actor(String name, String lastName, String dateOfBirth) {
+        this.name = name;
+        this.lastName = lastName;
+        this.dateOfBirth = dateOfBirth;
+
+    }
+
 
     public String getDateOfBirth() {
         return dateOfBirth;
@@ -41,3 +51,5 @@ public class Actor {
         this.lastName = lastName;
     }
 }
+
+

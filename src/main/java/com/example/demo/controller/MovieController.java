@@ -6,15 +6,17 @@ import com.example.demo.controller.ActorController;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
-import static com.example.demo.model.Actor.filmography;
 import static com.example.demo.model.Movie.mainActor;
+import static com.example.demo.model.Movie.filmography;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@RestController
 public class MovieController {
 
     private static final Map<String, List<Movie>> movieDB = new HashMap<String, List<Movie>>();
@@ -31,8 +33,7 @@ public class MovieController {
 
     @RequestMapping(value = "/getAllMovies/{*}", method = RequestMethod.GET)
     public List<Movie> getAllMovies() {
-
-        return null;
+        return movieDB.get("value");
     }
     @RequestMapping(value = "/getMoviesByTitle/{title}", method = RequestMethod.GET)
     public List<Movie> getActorByName(@PathVariable String title) {

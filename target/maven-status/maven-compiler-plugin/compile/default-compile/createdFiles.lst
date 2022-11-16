@@ -1,0 +1,5 @@
+com\example\demo\controller\MovieController.class
+com\example\demo\model\Movie.class
+com\example\demo\DemoApplication.class
+com\example\demo\model\Actor.class
+com\example\demo\controller\ActorController.class
